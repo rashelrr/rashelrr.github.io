@@ -407,8 +407,6 @@ section {
   margin-bottom: 15px;
 }
 
-
-
 .about .content ul {
   list-style: none;
   padding: 0;
@@ -467,7 +465,7 @@ section {
 .experiences .experiences-item h5 {
   font-size: 16px;
   background: #f7f8f9;
-  padding: 5px 15px;
+  padding-top: 5px;
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
@@ -475,10 +473,6 @@ section {
 
 .experiences .experiences-item ul {
   padding-left: 20px;
-}
-
-.experiences .experiences-item ul li {
-  padding-bottom: 10px;
 }
 
 .experiences .experiences-item:last-child {

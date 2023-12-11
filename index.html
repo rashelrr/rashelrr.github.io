@@ -48,7 +48,7 @@
       <ul>
         <li><a href="#home" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
         <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-        <li><a href="#experiences" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Experiences</span></a></li>
+        <li><a href="#experiences" class="nav-link scrollto"><i class="bi bi-briefcase"></i> <span>Experience</span></a></li>
         <li><a href="#projects" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
         <li><a href="assets/uploads/Rashel Rojas - Resume.pdf" target="_blank" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
       </ul>
@@ -73,7 +73,7 @@
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
+      <div class="container px-5" data-aos="fade-up">
 
         <div class="section-title">
           <h2>About Me</h2>
@@ -98,6 +98,7 @@
             <p><strong style="color: #728394;">Email:</strong> rdr2139@columbia.edu </p>
             <br>
 
+            <!-- Credit: https://www.geeksforgeeks.org/bootstrap-5-grid-system-nesting/ -->
             <div class="row">
               <!-- Tech Stack-->
               <div class="col"> 
@@ -147,61 +148,68 @@
 
     <!-- ======= Experiences Section ======= -->
     <section id="experiences" class="experiences">
-      <div class="container" data-aos="fade-up">
+      <div class="container px-5" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Experiences</h2>
+          <h2>Experience</h2>
         </div>
-
+        
         <div class="row">
-          <div class="col-lg-6">
-            <h3 class="experiences-title">Sumary</h3>
+          <div class="col-lg-12 px-5">
             <div class="experiences-item pb-0">
-              <h4>Brandon Johnson</h4>
-              <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
+              <h3 class="experiences-title">Major League Hacking</h3>
+              <h4>Production Engineering Intern</h4>
+              <h5>June 2022 - August 2022</h5>
+              <p><em>Remote</em></p>
               <ul>
-                <li>Portland par 127,Orlando, FL</li>
-                <li>(123) 456-7891</li>
-                <li>alice.barkley@example.com</li>
+                <li>Completed 12-weeks of structured curriculum-based learning covering core Production 
+                  Engineering topics, supplemented with events/workshops hosted by industry experts</li>
+                <li>Created an open-source personal 
+                  <a href="https://github.com/rashelrr/mlh-portfolio-project" target="_blank">portfolio website</a> 
+                  template using Python, MySQL, Jinja, 
+                  Flask, JavaScript, Docker, Nginx, and unittest with automated testing and deployment 
+                  workflows using CI/CD</li>
+                <li>Set up system and container monitoring, alerting, and visualization using Prometheus 
+                  and Grafana</li>
               </ul>
             </div>
-
-            <h3 class="experiences-title">Education</h3>
-            <div class="experiences-item">
-              <h4>Master of Fine Arts &amp; Graphic Design</h4>
-              <h5>2015 - 2016</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Qui deserunt veniam. Et sed aliquam labore tempore sed quisquam iusto autem sit. Ea vero voluptatum qui ut dignissimos deleniti nerada porti sand markend</p>
-            </div>
-            <div class="experiences-item">
-              <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
-              <h5>2010 - 2014</h5>
-              <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
-              <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
-            </div>
-          </div>
-          <div class="col-lg-6">
-            <h3 class="experiences-title">Professional Experience</h3>
-            <div class="experiences-item">
-              <h4>Senior graphic design specialist</h4>
-              <h5>2019 - Present</h5>
-              <p><em>Experion, New York, NY </em></p>
+            <div class="experiences-item pb-0">
+              <h3 class="experiences-title">Goldman Sachs</h3>
+              <h4>Engineering Summer Analyst</h4>
+              <h5>June 2021 - August 2021</h5>
+              <p><em>Dallas, TX</em></p>
+              <h6><strong>Global Credit Technology Team</strong></h6>
               <ul>
-                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+                <li>Optimized storage system of a pre-trade analysis tool called Troodon, 
+                  which generates and stores Bond Analysis Worksheets (BAWs) into a local 
+                  folder used by the CLO Secondary Trading desk of 15 traders</li>
+                <li>Created a Procmon script in Slang (GS proprietary language) to transfer 
+                  BAWs older than 2 years from local to cloud storage in Goldman Sachs' main 
+                  cloud storage system, OBS2</li>
+                <li>Successful in freeing up hundreds of gigabytes of space, which came at a 
+                  crucial time considering local storage was at 90% capacity and the recent 
+                  uptick in CLO trading</li>
+              </ul>
+              <h6><strong>GMD Managed Data Services Team</strong></h6>
+              <ul>
+                <li>Enhanced Goldman Sachs 
+                  <a href="https://marquee.gs.com/welcome/" target="_blank">Marquee Data</a> 
+                  APIs to provide new API parameter to 
+                  allow clients to filter assets from their composite asset collections using 
+                  Java, Vert.x, IntelliJ, and GitLab</li>
+                <li>Learned about financial data referencing and cross identifiers</li>
               </ul>
             </div>
             <div class="experiences-item">
-              <h4>Graphic design specialist</h4>
-              <h5>2017 - 2018</h5>
-              <p><em>Stepping Stone Advertising, New York, NY</em></p>
+              <h3 class="experiences-title">Red Hat</h3>
+              <h4>Software Engineering Intern</h4>
+              <h5>May 2020 - August 2020</h5>
+              <p><em>Boston, MA</em></p>
               <ul>
-                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+                <li>Worked under Babak Mozaffari on a team of 13 software engineers on the development 
+                  of OpenShift/Kubernetes operators for Red Hat and upstream open-source products</li>
+                <li>Implemented CR/CRD validation and ConsoleLink creation for 5 operators (3scale, Teiid, Apicurio, Hawtio,
+                  Syndesis) using Go and verified operator deployment via the OpenShift Container Platform</li>
               </ul>
             </div>
           </div>
