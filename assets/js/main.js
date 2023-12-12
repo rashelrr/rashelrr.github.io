@@ -152,6 +152,41 @@
     });
   }
 
+
+
+
+
+
+  /**
+   * Using GitHub API to get my repositories
+   * Credit: https://github.com/2kabhishek/projects 
+   */
+
+  const getRepos = async() => {
+    const url = 'https://api.github.com/users/rashelrr/repos?sort=pushed';
+    let res = await fetch(url);
+    let data = await res.json();
+    let repos = [];
+    repos = repos.concat(data);
+
+    let display = ["rashelrr/rashelrr.github.io", "rashelrr/mlh-portfolio-project", 
+                  "rashelrr/flyer-project", "rashelrr/sps21-team1", 
+                  "rashelrr/Amoeba"]
+    for (const repo of repos) {
+      if (display.includes(repo.full_name)) {
+        console.log(repo.full_name, repo.description, repo.language, repo.html_url);
+      }
+    };
+  };
+  getRepos();
+
+
+
+
+
+
+
+
   /**
    * Project isotope and filter
    */
