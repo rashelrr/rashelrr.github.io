@@ -171,10 +171,22 @@
 
     let display = ["rashelrr/rashelrr.github.io", "rashelrr/mlh-portfolio-project", 
                   "rashelrr/flyer-project", "rashelrr/sps21-team1", 
-                  "rashelrr/Amoeba"]
+                  "rashelrr/Amoeba"];
+    
+    let i = 1;
     for (const repo of repos) {
       if (display.includes(repo.full_name)) {
-        console.log(repo.full_name, repo.description, repo.language, repo.html_url);
+        var h4 = document.querySelector("#project" + i + " h4");
+        h4.innerHTML = repo.full_name;
+
+        var p = document.querySelector("#project" + i + " .about");
+        p.innerHTML = repo.description;
+
+        var p = document.querySelector("#project" + i + " .language");
+        p.innerHTML = repo.language;
+
+        i++;
+        //console.log(repo.full_name, repo.description, repo.language, repo.html_url);
       }
     };
   };
