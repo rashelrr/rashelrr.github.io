@@ -189,11 +189,10 @@
         var p = select("#project" + i + " .language");
         p.innerHTML = repo.language;
 
-        var div = select("#project" + i);
-        div.addEventListener('click', function() {
+        on('click', "#project" + i, function(e) {
           window.open(repo.html_url, "_blank");
         });
-
+      
         i++;
       }
     };
