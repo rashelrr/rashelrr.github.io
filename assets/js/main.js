@@ -168,10 +168,6 @@
     let data = await res.json();
     let repos = [];
     repos = repos.concat(data);
-
-    /*let display = ["rashelrr/rashelrr.github.io", "rashelrr/mlh-portfolio-project", 
-                  "rashelrr/flyer-project", "rashelrr/sps21-team1", 
-                  "rashelrr/Amoeba"];*/
     
     const projectNames = {
       "rashelrr/rashelrr.github.io": "Personal Portfolio Website",
@@ -184,17 +180,21 @@
     let i = 1;
     for (const repo of repos) {
       if (Object.keys(projectNames).includes(repo.full_name)) {
-        var h4 = document.querySelector("#project" + i + " h4");
+        var h4 = select("#project" + i + " h4");
         h4.innerHTML = projectNames[repo.full_name];
 
-        var p = document.querySelector("#project" + i + " .about");
+        var p = select("#project" + i + " .about");
         p.innerHTML = repo.description;
 
-        var p = document.querySelector("#project" + i + " .language");
+        var p = select("#project" + i + " .language");
         p.innerHTML = repo.language;
 
+        var div = select("#project" + i);
+        div.addEventListener('click', function() {
+          window.open(repo.html_url, "_blank");
+        });
+
         i++;
-        //console.log(repo.html_url);
       }
     };
   };
