@@ -492,8 +492,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Projects
+# portfolio
 --------------------------------------------------------------*/
+/*
 .projects .projects-item {
   margin-bottom: 30px;
 }
@@ -614,11 +615,12 @@ section {
 .projects .projects-wrap:hover .projects-info::after {
   bottom: 15px;
   right: 15px;
-}
+}*/
 
 /*--------------------------------------------------------------
-# Projects Details
+# portfolio Details
 --------------------------------------------------------------*/
+/*
 .projects-details {
   padding-top: 40px;
 }
@@ -679,34 +681,34 @@ section {
 
 .projects-details .projects-description p {
   padding: 0;
-}
+}*/
 
 /*--------------------------------------------------------------
-# Services
+# Projects
 --------------------------------------------------------------*/
 
-.services .icon-box {
+.projects .icon-box {
   padding: 2rem;
   transition: all ease-in-out 0.3s;
   background: #fff;
   box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
 }
 
-.services .icon-box h4 {
+.projects .icon-box h4 {
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 26px;
   color: #45505b;
 }
 
-.services .icon-box .about {
+.projects .icon-box .about {
   font-size: 18px;
   /*font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #0563bb;*/
 }
 
-.services .icon-box .language {
+.projects .icon-box .language {
   font-size: 12px;
   background: #ccd9e8; /* change in js according to language? */
   padding-left: 5px;
@@ -715,13 +717,13 @@ section {
   font-weight: 600;
 }
 
-.services .icon-box p {
+.projects .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
 }
 
-.services .icon-box:hover {
+.projects .icon-box:hover {
   border-color: #fff;
   box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }

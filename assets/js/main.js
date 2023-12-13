@@ -200,7 +200,7 @@
 
 
   /**
-   * Project isotope and filter
+   * Portfolio isotope and filter
    */
   window.addEventListener('load', () => {
     let projectsContainer = select('.projects-container');
