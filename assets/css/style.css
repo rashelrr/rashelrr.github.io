@@ -691,14 +691,18 @@ section {
   background-clip: content-box;
   color: #45505b;
 }
+
 .projects .color-box:hover {
-  animation: animate-color 0.5s forwards; 
+  animation: animate-color 0.5s forwards, animate-bounce 0.6s forwards; 
 }
 
 @keyframes animate-color {
-  0%   { background-color: #b8cde2; transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { background-color: #9ccbf9; color: white; transform: translateY(0); }
+  0%   { background-color: #b8cde2; }
+  100% { background-color: #9ccbf9; color: white; }
+}
+
+@keyframes animate-bounce {
+  to { transform: translateY(-10px) }
 }
 
 .projects .icon-box {
