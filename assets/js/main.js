@@ -152,11 +152,6 @@
     });
   }
 
-
-
-
-
-
   /**
    * Using GitHub API to get my repositories
    * Credit: https://github.com/2kabhishek/projects 
@@ -198,13 +193,6 @@
     };
   };
   getRepos();
-
-
-
-
-
-
-
 
   /**
    * Portfolio isotope and filter

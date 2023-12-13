@@ -687,14 +687,21 @@ section {
 # Projects
 --------------------------------------------------------------*/
 .projects .color-box {
-  background: #c9c7c7; 
+  background: #b8cde2; 
   background-clip: content-box;
+  color: #45505b;
+}
+.projects .color-box:hover {
+  animation: animate-color 0.5s forwards; 
+}
+
+@keyframes animate-color {
+  0%   { background-color: #b8cde2; }
+  100% { background-color: #9ccbf9; color: white; }
 }
 
 .projects .icon-box {
-  padding: 2rem;
-  transition: all ease-in-out 0.3s;
-  box-shadow: 0px 5px 90px 0px rgba(110, 123, 131, 0.05);
+  padding: 2rem; 
   cursor: pointer;
 }
 
@@ -702,7 +709,6 @@ section {
   font-weight: 700;
   margin: 10px 0 15px 0;
   font-size: 26px;
-  color: #45505b;
 }
 
 .projects .icon-box .about {
@@ -732,11 +738,6 @@ section {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-}
-
-.projects .icon-box:hover {
-  border-color: #fff;
-  box-shadow: 0px 0 35px 0 rgba(0, 0, 0, 0.08);
 }
 
 /*--------------------------------------------------------------
