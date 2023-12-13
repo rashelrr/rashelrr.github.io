@@ -169,15 +169,23 @@
     let repos = [];
     repos = repos.concat(data);
 
-    let display = ["rashelrr/rashelrr.github.io", "rashelrr/mlh-portfolio-project", 
+    /*let display = ["rashelrr/rashelrr.github.io", "rashelrr/mlh-portfolio-project", 
                   "rashelrr/flyer-project", "rashelrr/sps21-team1", 
-                  "rashelrr/Amoeba"];
+                  "rashelrr/Amoeba"];*/
+    
+    const projectNames = {
+      "rashelrr/rashelrr.github.io": "Personal Portfolio Website",
+      "rashelrr/mlh-portfolio-project": "MLH Portfolio Website", 
+      "rashelrr/flyer-project": "Flyer to Google Calendar", 
+      "rashelrr/sps21-team1": "Social Movement Tracker", 
+      "rashelrr/Amoeba": "Amoeba"
+    };
     
     let i = 1;
     for (const repo of repos) {
-      if (display.includes(repo.full_name)) {
+      if (Object.keys(projectNames).includes(repo.full_name)) {
         var h4 = document.querySelector("#project" + i + " h4");
-        h4.innerHTML = repo.full_name;
+        h4.innerHTML = projectNames[repo.full_name];
 
         var p = document.querySelector("#project" + i + " .about");
         p.innerHTML = repo.description;
@@ -186,7 +194,7 @@
         p.innerHTML = repo.language;
 
         i++;
-        //console.log(repo.full_name, repo.description, repo.language, repo.html_url);
+        //console.log(repo.html_url);
       }
     };
   };
