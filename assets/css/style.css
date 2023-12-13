@@ -696,8 +696,9 @@ section {
 }
 
 @keyframes animate-color {
-  0%   { background-color: #b8cde2; }
-  100% { background-color: #9ccbf9; color: white; }
+  0%   { background-color: #b8cde2; transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { background-color: #9ccbf9; color: white; transform: translateY(0); }
 }
 
 .projects .icon-box {
