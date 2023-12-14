@@ -175,6 +175,7 @@
       "rashelrr/Amoeba": "Amoeba"
     };
     
+    // Add project details by updating html/css
     let i = 1;
     for (const repo of repos) {
       if (Object.keys(projectNames).includes(repo.full_name)) {
@@ -184,15 +185,41 @@
         var p = select("#project" + i + " .about");
         p.innerHTML = repo.description;
 
-        var p = select("#project" + i + " .language");
-        p.innerHTML = repo.language;
+        // Get top 3 coding languages in this repo
+        const urlLanguages = repo.languages_url;
+        let resLangs = await fetch(urlLanguages);
+        let dataLangs = await resLangs.json();
+        var arrLangs = Object.keys(dataLangs).slice(0, 3);
 
+        // Add coding languages to HTML text
+        var pMatches = select("#project" + i + " .language", true);
+        let langIdx = 0;
+        pMatches.forEach((p) => {
+          if (typeof arrLangs[langIdx] !== "undefined") {
+            p.innerHTML = arrLangs[langIdx];
+            langIdx++;
+          }
+        });
 
-        let color = dataColors[repo.language].color;
-        var span = select("#project" + i + " .language-color");
-        span.style.backgroundColor = color;
-        span.style.border = "1px solid " + color;
+        // Get colors for each coding language using online JSON
+        let arrColors = []
+        for (const lang of arrLangs) {
+          let color = dataColors[lang].color;
+          arrColors.push(color);
+        };
 
+        // Add color next to each language
+        var spanMatches = select("#project" + i + " .language-color", true);
+        let colorIdx = 0;
+        spanMatches.forEach((span) => {
+          if (typeof arrColors[colorIdx] !== "undefined") {
+            span.style.backgroundColor = arrColors[colorIdx];
+            span.style.border = "1px solid " + arrColors[colorIdx];
+            colorIdx++;
+          }
+        });
+        
+        // Open project's github url when clicked
         on('click', "#project" + i, function(e) {
           window.open(repo.html_url, "_blank");
         });

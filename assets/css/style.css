@@ -741,8 +741,6 @@ section {
 }
 
 .projects .icon-box .language-color {
-  background-color: #3572A5;
-  border: 1px solid #3572A5;
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -753,6 +751,7 @@ section {
   font-size: 14px;
   display: inline-block;
   font-weight: 600;
+  padding-right: 10px;
 }
 
 .projects .icon-box p {
