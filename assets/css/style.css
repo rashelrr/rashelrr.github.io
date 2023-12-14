@@ -723,14 +723,14 @@ section {
 .projects .icon-box h4 {
   font-weight: 700;
   margin: 10px 0 15px 0;
-  font-size: 26px;
+  font-size: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .projects .icon-box .about {
   font-size: 18px;
-  /*font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #0563bb;*/
 }
 
 .projects .icon-box .language {
