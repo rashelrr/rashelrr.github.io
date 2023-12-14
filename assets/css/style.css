@@ -690,6 +690,7 @@ section {
   background: #b8cde2; 
   background-clip: content-box;
   color: #45505b;
+  fill: #45505b;
 }
 
 .projects .color-box:hover {
@@ -698,7 +699,7 @@ section {
 
 @keyframes animate-color {
   0%   { background-color: #b8cde2; }
-  100% { background-color: #9ccbf9; color: white; }
+  100% { background-color: #9ccbf9; color: white; fill: white;}
 }
 
 @keyframes animate-bounce {
@@ -708,6 +709,15 @@ section {
 .projects .icon-box {
   padding: 2rem; 
   cursor: pointer;
+}
+
+.projects .icon-box .repo-name-div {
+  align-items: baseline;
+  display: flex;
+}
+
+.projects .icon-box .repo-icon {
+  margin-right: 5px;
 }
 
 .projects .icon-box h4 {
