@@ -159,10 +159,13 @@
 
   const getRepos = async() => {
     const url = 'https://api.github.com/users/rashelrr/repos?sort=pushed';
+    const urlColors = 'https://raw.githubusercontent.com/ozh/github-colors/master/colors.json';
     let res = await fetch(url);
     let data = await res.json();
     let repos = [];
     repos = repos.concat(data);
+    let resColors = await fetch(urlColors);
+    let dataColors = await resColors.json();
     
     const projectNames = {
       "rashelrr/rashelrr.github.io": "Personal Portfolio Website",
@@ -183,6 +186,12 @@
 
         var p = select("#project" + i + " .language");
         p.innerHTML = repo.language;
+
+
+        let color = dataColors[repo.language].color;
+        var span = select("#project" + i + " .language-color");
+        span.style.backgroundColor = color;
+        span.style.border = "1px solid " + color;
 
         on('click', "#project" + i, function(e) {
           window.open(repo.html_url, "_blank");
